@@ -1,0 +1,5 @@
+{
+    "UrlTrackGenerator": "https://helloacm.com/api/random/?n=15",
+    "ParcelToTrackInParallel": 25,
+    "WaitFor": 1000
+}

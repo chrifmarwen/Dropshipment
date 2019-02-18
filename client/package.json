@@ -1,0 +1,39 @@
+{
+  "name": "datagrid",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://datagrid.marwen-cherif.com",
+  "proxy": "http://localhost:5000/",
+  "dependencies": {
+    "jest-config": "latest",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-data-grid": "^5.0.5",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "react-test-renderer": "^16.7.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "font-awesome": "^4.7.0"
+  }
+}
