@@ -52,6 +52,7 @@ class App extends Component {
 
   render() {
     let { newOrders, newParcels, loading } = this.state
+    let totalValue = newParcels.reduce((acc, parcel) => acc + parcel.value, 0)
     return (
       <div className="App">
         <header className="App-header">
@@ -67,6 +68,10 @@ class App extends Component {
             onNewOrders={this.onNewOrders.bind(this)}
             onNewParcels={this.onNewParcels.bind(this)}
           />
+          <div className='total-amount'>
+            <label>Total Value:</label>
+            <span>{totalValue} €</span>
+          </div>
           <ParcelsVisualiser parcels={newParcels} />
         </div>
       </div>

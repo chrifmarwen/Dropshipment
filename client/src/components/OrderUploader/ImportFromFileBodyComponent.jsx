@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const ImportFromFileBodyComponent = ({ onNewOrdersLoad }) => {
   let fileReader
@@ -25,6 +26,10 @@ const ImportFromFileBodyComponent = ({ onNewOrdersLoad }) => {
            onChange={e => handleFileChosen(e.target.files[0])}
     />
   </div>
+}
+
+ImportFromFileBodyComponent.propTypes = {
+  onNewOrdersLoad: PropTypes.func.isRequired
 }
 
 export default ImportFromFileBodyComponent

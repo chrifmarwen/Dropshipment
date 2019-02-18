@@ -1,6 +1,7 @@
 import React from 'react'
-import ImportFromFileBodyComponent from './ImportFromFileBodyComponent'
 import axios from 'axios'
+import PropTypes from 'prop-types'
+import ImportFromFileBodyComponent from './ImportFromFileBodyComponent'
 
 const OrderUploader = ({ newOrders, onNewOrders, onNewParcels, onLoading }) => {
 
@@ -19,7 +20,7 @@ const OrderUploader = ({ newOrders, onNewOrders, onNewParcels, onLoading }) => {
   }
 
   return (
-    <div>
+    <div className='order-uploader'>
       <ImportFromFileBodyComponent
         onNewOrdersLoad={({ orders }) => onNewOrders(orders)}
       />
@@ -28,6 +29,13 @@ const OrderUploader = ({ newOrders, onNewOrders, onNewParcels, onLoading }) => {
       </button>
     </div>
   )
+}
+
+OrderUploader.propTypes = {
+  newOrders: PropTypes.array.isRequired,
+  onNewOrders: PropTypes.func.isRequired,
+  onNewParcels: PropTypes.func.isRequired,
+  onLoading: PropTypes.func.isRequired
 }
 
 export default OrderUploader

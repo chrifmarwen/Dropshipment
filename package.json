@@ -8,7 +8,7 @@
     "debug-server": "nodemon %NODE_DEBUG_OPTION% server/index.js",
     "test": "mocha server/tests/**/*.test.js --recursive --timeout 5000 && cd client && npm test && cd ..",
     "test-with-coverage": "nyc mocha server/**/*test.js --recursive --timeout 5000 && cd client && npm test -- --coverage && cd ..",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -17,7 +17,6 @@
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
     "lodash": "^4.17.11",
-    "lorem-ipsum": "^1.0.6",
     "ramda": "^0.26.1",
     "uuid": "^3.3.2"
   },
